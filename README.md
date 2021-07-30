@@ -4,7 +4,7 @@ This project is a complete front-end website for a library, it was built using r
 
 ## Live demo
 
-[live demo]()
+[live demo](https://library-app-hl.herokuapp.com/)
 
 ## Built With
 
