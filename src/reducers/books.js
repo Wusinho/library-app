@@ -1,7 +1,7 @@
 import * as actions from '../actions/booksActions';
 
 export default function reducer(state = [], action) {
-  if (action.type === actions.BOOK_ADDED) {
+  if (action.type === actions.CREATE_BOOK) {
     return [
       ...state,
       {
@@ -11,7 +11,7 @@ export default function reducer(state = [], action) {
       },
     ];
   }
-  if (action.type === actions.BOOK_REMOVED) {
+  if (action.type === actions.REMOVE_BOOK) {
     return state.filter((book) => book.id !== action.payload.id);
   }
   return state;

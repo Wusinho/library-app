@@ -1,2 +1,2 @@
-export const BOOK_ADDED = 'bookAdded';
-export const BOOK_REMOVED = 'bookRemoved';
+export const CREATE_BOOK = 'bookAdded';
+export const REMOVE_BOOK = 'bookRemoved';
