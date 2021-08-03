@@ -5,7 +5,7 @@ export default function reducer(state = [], action) {
     return [
       ...state,
       {
-        id: (Math.random() * 10000),
+        id: Math.floor(Math.random() * 10000),
         title: action.payload.title,
         description: action.payload.description,
         category: action.payload.category,

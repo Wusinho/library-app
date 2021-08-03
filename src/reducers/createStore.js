@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-export default function configureStoreApp({ reducer }) {
-  return configureStore({ reducer });
+export default function configureStoreApp(reducer) {
+  return configureStore(reducer);
 }
