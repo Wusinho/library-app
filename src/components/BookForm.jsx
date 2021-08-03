@@ -2,9 +2,10 @@ import React from 'react';
 
 function BookForm() {
   return (
-    <div>
-      Hello
-    </div>
+    <form>
+      <input type="text" />
+      <button type="submit" className="btn btn-submit"> Add book </button>
+    </form>
   );
 }
 

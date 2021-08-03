@@ -1,11 +1,10 @@
 import React from 'react';
-import BookForm from './BookForm';
 
 function BooksList() {
   return (
     <div>
-      <BookForm />
-      <BookForm />
+      <h1>libros</h1>
+      <h2>libros</h2>
     </div>
   );
 }
