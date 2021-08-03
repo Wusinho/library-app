@@ -2,9 +2,12 @@ import React from 'react';
 
 function BooksList() {
   return (
-    <div>
-      <h1>libros</h1>
-      <h2>libros</h2>
+    <div className="card">
+      <div className="card-body">
+        <h5 className="card-title">Book Title</h5>
+        <h6 className="card-subtitle mb-2 text-muted">Book Category</h6>
+        <p className="card-text">Description</p>
+      </div>
     </div>
   );
 }

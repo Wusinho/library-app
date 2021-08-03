@@ -4,9 +4,10 @@ function BookForm() {
   return (
     <form>
       <div className="input-group mb-3">
-        <input type="text" className="form-control" />
+        <input type="text" className="form-control" placeholder="Book title" />
+        <input type="text" className="form-control" placeholder="Description" />
         <select className="form-control" id="input3">
-          <option selected>Choose a Category</option>
+          <option defaultValue>Choose a Category</option>
           <option>Action</option>
           <option>Biography</option>
           <option>History</option>
