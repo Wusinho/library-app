@@ -1,5 +1,6 @@
-import { configureStore } from '@reduxjs/toolkit';
+// import { configureStore } from '@reduxjs/toolkit';
+// import reducer from './books';
 
-export default function configureStoreApp(reducer) {
-  return configureStore(reducer);
-}
+// export default function configureStoreApp() {
+//   return configureStore(reducer);
+// }

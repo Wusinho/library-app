@@ -1,14 +1,8 @@
 import React from 'react';
 import store from '../reducers/index';
-import * as actions from '../actions/book';
 
 const BooksList = () => {
-  store.dispatch(actions.bookAdded('book 1', 'description of book 1', 'horror'));
-  store.dispatch(actions.bookAdded('book 2', 'description of book 2', 'action'));
-  store.dispatch(actions.bookAdded('book 3', 'description of book 3', 'war'));
-
   const getBooks = (store.getState());
-
   return (
     getBooks.map((book) => (
       <div className="card" key={book.id}>
