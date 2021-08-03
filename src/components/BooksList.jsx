@@ -1,5 +1,5 @@
 import React from 'react';
-import store from '../reducers/store';
+import store from '../reducers/index';
 import * as actions from '../actions/book';
 
 const BooksList = () => {
