@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 import * as actions from '../actions/booksActions';
 
 export default function reducer(state = [], action) {
@@ -5,7 +7,7 @@ export default function reducer(state = [], action) {
     return [
       ...state,
       {
-        id: Math.floor(Math.random() * 10000),
+        id: uuidv4().slice(0, 6),
         title: action.payload.title,
         description: action.payload.description,
         category: action.payload.category,
