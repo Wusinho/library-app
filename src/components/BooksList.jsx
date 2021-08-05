@@ -2,9 +2,10 @@ import React from 'react';
 import store from '../reducers/index';
 
 const BooksList = () => {
-  const getBooks = (store.getState());
+  const { books } = store.getState().entities;
+  // console.log(books);
   return (
-    getBooks.map((book) => (
+    books.map((book) => (
       <div className="card" key={book.id}>
         <div className="card-body">
           <h5 className="card-title">{book.title}</h5>
