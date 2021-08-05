@@ -1,12 +1,16 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import BookForm from './BookForm';
 import BookList from './BooksList';
+import configureStoreApp from '../reducers/configureStore';
+
+const store = configureStoreApp();
 
 const App = () => (
-  <div>
+  <Provider store={store}>
     <BookForm />
     <BookList />
-  </div>
+  </Provider>
 );
 
 export default App;

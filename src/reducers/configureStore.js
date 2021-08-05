@@ -5,4 +5,4 @@ function configureStoreApp() {
   return configureStore({ reducer });
 }
 
-export default configureStoreApp();
+export default configureStoreApp;
