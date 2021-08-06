@@ -1,9 +1,14 @@
+// import { useDispatch } from 'react-redux';
 import React from 'react';
-import store from '../reducers/index';
+import { useSelector } from 'react-redux';
+// import store from '../reducers/index';
+import removeBook from '../reducers/removeBook';
+
+const getID = (books) => books.id;
 
 const BooksList = () => {
-  const { books } = store.getState().entities;
-  // console.log(books);
+  const books = useSelector((state) => state.entities.books);
+
   return (
     books.map((book) => (
       <div className="card my-3" key={book.id}>
@@ -14,7 +19,7 @@ const BooksList = () => {
           <span>ID: </span>
           <span>{book.id}</span>
         </div>
-        <button className="btn btn-danger m-2" type="button">Remove Book</button>
+        <button onClick={() => removeBook(getID(book))} className="btn btn-danger m-2" type="button">Remove Book</button>
       </div>
     ))
   );
