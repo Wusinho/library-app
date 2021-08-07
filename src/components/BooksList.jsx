@@ -1,7 +1,7 @@
 // import { useDispatch } from 'react-redux';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { removeBook } from '../reducers/functions';
+import removeBook from '../reducers/functions';
 
 const getID = (books) => books.id;
 
