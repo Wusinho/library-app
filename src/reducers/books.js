@@ -1,22 +1,27 @@
 // import { v4 as uuidv4 } from 'uuid';
+import { createSlice, createSelector } from '@reduxjs/toolkit';
 
-import * as actions from '../actions/booksActions';
-
-export default function reducer(state = [], action) {
-  if (action.type === actions.CREATE_BOOK) {
-    return [
-      ...state,
-      {
-        // id: uuidv4().slice(0, 6),
+export const bookSlice = createSlice({
+  name: 'book',
+  initialState: {
+    list: [],
+  },
+  reducers: {
+    addBook: (state, action) => {
+      state.list.push({
         id: action.payload.id,
-        title: action.payload.title,
+        name: action.payload.name,
         description: action.payload.description,
         category: action.payload.category,
-      },
-    ];
-  }
-  if (action.type === actions.REMOVE_BOOK) {
-    return state.filter((book) => book.id !== action.payload.id);
-  }
-  return state;
-}
+      });
+    },
+  },
+});
+
+export const getBookList = () => createSelector(
+  (state) => state.entities.bookSlice.list,
+);
+
+export const { addBook } = bookSlice.actions;
+
+export default bookSlice.reducer;
