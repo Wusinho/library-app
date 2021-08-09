@@ -4,7 +4,7 @@ import { addBook } from '../reducers/books';
 import categories from './categories';
 
 const BookForm = () => {
-  const [name, setName] = useState('');
+  const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategories] = useState('');
   const dispatch = useDispatch();
@@ -14,19 +14,21 @@ const BookForm = () => {
 
     dispatch(
       addBook({
-        name,
+        title,
         description,
         category,
       }),
     );
+    setTitle('');
+    setDescription('');
   };
 
   return (
     <form onSubmit={(e) => handleSubmit(e)}>
       <div className="input-group mb-3">
         <input
-          onChange={(e) => setName(e.target.value)}
-          value={name}
+          onChange={(e) => setTitle(e.target.value)}
+          value={title}
           type="text"
           className="form-control"
           placeholder="Book title"

@@ -1,15 +1,20 @@
 // import { useDispatch } from 'react-redux';
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 // import { getBookList } from '../reducers/books';
-import { removeBook } from '../reducers/functions';
+// import { removeBook } from '../reducers/functions';
+import { removeBook } from '../reducers/books';
 
-const getID = (books) => books.id;
+// const getID = (books) => books.id;
 
 const BooksList = () => {
+  const dispatch = useDispatch();
+
   const books = useSelector((state) => state.entities.books.list);
 
-  console.log(books);
+  const handleBookRemove = (books) => {
+    dispatch(removeBook(books));
+  };
 
   return (
     books.map((book) => (
@@ -21,7 +26,7 @@ const BooksList = () => {
           <span>ID: </span>
           <span>{book.id}</span>
         </div>
-        <button onClick={() => removeBook(getID(book))} className="btn btn-danger m-2" type="button">Remove Book</button>
+        <button onClick={() => handleBookRemove(book)} className="btn btn-danger m-2" type="button">Remove Book</button>
       </div>
     ))
   );
