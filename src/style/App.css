@@ -1,14 +1,14 @@
-.btn-danger{
+.btn-danger {
   min-width: 100px;
   width: 20%;
 }
 
-.card{
+.card {
   min-width: 300px;
   transition-duration: 600ms;
 }
 
-.card:hover{
+.card:hover {
   border-color: rgb(197, 197, 197);
   transition-duration: 400ms;
 }
