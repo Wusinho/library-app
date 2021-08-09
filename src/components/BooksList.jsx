@@ -1,11 +1,6 @@
-// import { useDispatch } from 'react-redux';
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-// import { getBookList } from '../reducers/books';
-// import { removeBook } from '../reducers/functions';
 import { removeBook } from '../reducers/books';
-
-// const getID = (books) => books.id;
 
 const BooksList = () => {
   const dispatch = useDispatch();
