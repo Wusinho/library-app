@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import categories from './categories';
 import * as actions from '../actions/book';
 
 const BookForm = () => {
-  const getBooks = useSelector((state) => state.entities.books);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
@@ -20,7 +19,6 @@ const BookForm = () => {
     ));
     setTitle('');
     setDescription('');
-    console.log(getBooks);
   };
 
   return (
