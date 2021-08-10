@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import categories from './categories';
-// import { addBook } from '../reducers/functions';
 import * as actions from '../actions/book';
 
 const BookForm = () => {
