@@ -1,26 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../reducers/books';
+import { bookAdded } from '../actions/book';
 import categories from './categories';
 
 const BookForm = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [category, setCategories] = useState('');
+  const [category, setCategory] = useState('');
   const dispatch = useDispatch();
+
+  useEffect(() => {
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     dispatch(
-      addBook({
+      bookAdded({
         title,
         description,
         category,
       }),
     );
-    setTitle('');
-    setDescription('');
   };
 
   return (
@@ -41,7 +42,7 @@ const BookForm = () => {
           placeholder="Description"
         />
         <select
-          onChange={(e) => setCategories(e.target.value)}
+          onChange={(e) => setCategory(e.target.value)}
           value={category}
           className="form-control"
           id="input3"

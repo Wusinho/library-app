@@ -7,6 +7,6 @@ export const removeBook = (id) => {
   store.dispatch(actions.bookRemoved(id));
 };
 
-export const addBook = (book) => {
-  store.dispatch(actions.bookAdded(book));
+export const addBook = (title, description, category) => {
+  store.dispatch(actions.bookAdded(title, description, category));
 };
