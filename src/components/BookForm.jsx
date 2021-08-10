@@ -1,22 +1,27 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import categories from './categories';
-import { addBook } from '../reducers/functions';
+// import { addBook } from '../reducers/functions';
+import * as actions from '../actions/book';
 
 const BookForm = () => {
+  const getBooks = useSelector((state) => state.entities.books);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    addBook(
+    dispatch(actions.bookAdded(
       title,
       description,
       category,
-    );
+    ));
     setTitle('');
     setDescription('');
+    console.log(getBooks);
   };
 
   return (

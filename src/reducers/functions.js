@@ -11,4 +11,4 @@ export const addBook = (title, description, category) => {
   store.dispatch(actions.bookAdded(title, description, category));
 };
 
-export const getState = () => store.getState();
+export const getState = () => store.getState().entities.books;
