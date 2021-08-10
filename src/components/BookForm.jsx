@@ -15,6 +15,8 @@ const BookForm = () => {
       description,
       category,
     );
+    setTitle('');
+    setDescription('');
   };
 
   return (

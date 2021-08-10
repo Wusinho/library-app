@@ -10,3 +10,5 @@ export const removeBook = (id) => {
 export const addBook = (title, description, category) => {
   store.dispatch(actions.bookAdded(title, description, category));
 };
+
+export const getState = () => store.getState();
