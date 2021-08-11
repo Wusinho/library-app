@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import * as actions from '../actions/book';
 import categories from './categories';
+import Book from './Book';
 
 const getID = (books) => books.id;
 
@@ -17,23 +18,15 @@ const BooksList = () => {
   };
 
   const displayBooks = getBooks.map((book) => (
-    <div className="card my-3" key={book.id}>
-      <div className="card-body">
-        <h5 className="card-title">{book.title}</h5>
-        <h6 className="card-subtitle mb-2 text-muted">{book.category}</h6>
-        <p className="card-text">{book.description}</p>
-        <span>ID: </span>
-        <span>{book.id}</span>
-      </div>
-      <button
-        onClick={() => handleBookRemove(book)}
-        className="btn btn-danger m-2"
-        type="button"
-      >
-        Remove Book
-      </button>
-    </div>
+    <Book
+      key={book.id}
+      handleClick={handleBookRemove}
+      book={{
+        id: book.id, title: book.title, category: book.category, percent: book.percent,
+      }}
+    />
   ));
+
   const filterCategories = (
     <div>
       <form onSubmit={(e) => setDescription(e.target.value)}>
