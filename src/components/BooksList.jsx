@@ -8,13 +8,16 @@ const getID = (books) => books.id;
 
 const BooksList = () => {
   const getBooks = useSelector((state) => state.entities.books);
+  // const selectedCategory = useSelector((state) => state.entities.filter);
   const dispatch = useDispatch();
+  // const books = getBooks.filter((book) => book.category === category);
 
   const handleBookRemove = (books) => {
     dispatch(actions.bookRemoved(getID(books)));
   };
-  const setDescription = (e) => {
-    console.log(e.target.value);
+
+  const handleFilterCHange = (e) => {
+    dispatch(actions.changeFilter(e.target.value));
   };
 
   const displayBooks = getBooks.map((book) => (
@@ -29,13 +32,13 @@ const BooksList = () => {
 
   const filterCategories = (
     <div>
-      <form onSubmit={(e) => setDescription(e.target.value)}>
+      <form>
         <select
-          // value={category}
           className="form-control"
+          onChange={(e) => handleFilterCHange(e)}
         >
           <option defaultValue disabled>Choose a Category</option>
-          <option key="1"> All </option>
+          <option key="0"> All </option>
           {categories.map((cat) => (
             <option key={cat.id} value={cat.cat}>
               {cat.cat}
