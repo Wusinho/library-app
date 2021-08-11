@@ -12,7 +12,7 @@ const BooksList = () => {
     dispatch(actions.bookRemoved(getID(books)));
   };
 
-  return getBooks.map((book) => (
+  const displayBooks = getBooks.map((book) => (
     <div className="card my-3" key={book.id}>
       <div className="card-body">
         <h5 className="card-title">{book.title}</h5>
@@ -30,6 +30,18 @@ const BooksList = () => {
       </button>
     </div>
   ));
+  const filterCategories = (
+    <div>
+      hello
+    </div>
+  );
+
+  return (
+    <div>
+      {filterCategories}
+      {displayBooks}
+    </div>
+  );
 };
 
 export default BooksList;
