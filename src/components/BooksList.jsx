@@ -26,7 +26,11 @@ const BooksList = () => {
           key={book.id}
           handleClick={handleBookRemove}
           book={{
-            id: book.id, title: book.title, category: book.category, percent: book.percent,
+            id: book.id,
+            title: book.title,
+            description: book.description,
+            category: book.category,
+            percent: book.percent,
           }}
         />
       ));
@@ -37,7 +41,11 @@ const BooksList = () => {
         key={book.id}
         handleClick={selectedCategory}
         book={{
-          id: book.id, title: book.title, category: book.category, percent: book.percent,
+          id: book.id,
+          title: book.title,
+          description: book.description,
+          category: book.category,
+          percent: book.percent,
         }}
       />
     ));
@@ -50,7 +58,9 @@ const BooksList = () => {
           className="form-control"
           onChange={(e) => handleFilterCHange(e)}
         >
-          <option defaultValue disabled>Choose a Category</option>
+          <option defaultValue disabled>
+            Choose a Category
+          </option>
           <option key="0"> All </option>
           {categories.map((cat) => (
             <option key={cat.id} value={cat.cat}>

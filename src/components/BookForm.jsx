@@ -5,7 +5,6 @@ import * as actions from '../actions/book';
 
 const BookForm = () => {
   const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
   const dispatch = useDispatch();
 
@@ -14,11 +13,9 @@ const BookForm = () => {
 
     dispatch(actions.bookAdded(
       title,
-      description,
       category,
     ));
     setTitle('');
-    setDescription('');
   };
 
   return (
@@ -30,13 +27,6 @@ const BookForm = () => {
           type="text"
           className="form-control"
           placeholder="Book title"
-        />
-        <input
-          onChange={(e) => setDescription(e.target.value)}
-          value={description}
-          type="text"
-          className="form-control"
-          placeholder="Description"
         />
         <select
           onChange={(e) => setCategory(e.target.value)}
