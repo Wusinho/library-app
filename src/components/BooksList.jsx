@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import * as actions from '../actions/book';
+import categories from './categories';
 
 const getID = (books) => books.id;
 
@@ -10,6 +11,9 @@ const BooksList = () => {
 
   const handleBookRemove = (books) => {
     dispatch(actions.bookRemoved(getID(books)));
+  };
+  const setDescription = (e) => {
+    console.log(e.target.value);
   };
 
   const displayBooks = getBooks.map((book) => (
@@ -32,12 +36,25 @@ const BooksList = () => {
   ));
   const filterCategories = (
     <div>
-      hello
+      <form onSubmit={(e) => setDescription(e.target.value)}>
+        <select
+          // value={category}
+          className="form-control"
+        >
+          <option defaultValue disabled>Choose a Category</option>
+          <option key="1"> All </option>
+          {categories.map((cat) => (
+            <option key={cat.id} value={cat.cat}>
+              {cat.cat}
+            </option>
+          ))}
+        </select>
+      </form>
     </div>
   );
 
   return (
-    <div>
+    <div className="displayBooks">
       {filterCategories}
       {displayBooks}
     </div>

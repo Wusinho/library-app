@@ -15,3 +15,8 @@ export const bookRemoved = (id) => ({
     id,
   },
 });
+
+export const changeFilter = (category) => ({
+  type: actions.CHANGE_FILTER,
+  payload: category,
+});
