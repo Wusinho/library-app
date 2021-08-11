@@ -27,7 +27,7 @@ This project is a complete front-end website for a library, it was built using r
 
 ## Author
 
-👤 **Miguel Ricaño**
+👤 **Heber Lazo**
 
 - Github: [@Wusinho](https://github.com/Wusinho)
 - LinkedIn: [Heber Lazo](https://www.linkedin.com/in/heber-lazo-benza-523266133/)
