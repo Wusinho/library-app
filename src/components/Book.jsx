@@ -16,7 +16,7 @@ const Book = ({ book, handleClick }) => {
         <span>{book.id}</span>
       </div>
       <button
-        onClick={() => deleteBook(book)}
+        onClick={deleteBook}
         className="btn btn-danger m-2"
         type="button"
       >

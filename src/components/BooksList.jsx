@@ -8,9 +8,8 @@ const getID = (books) => books.id;
 
 const BooksList = () => {
   const getBooks = useSelector((state) => state.entities.books);
-  // const selectedCategory = useSelector((state) => state.entities.filter);
+  const selectedCategory = useSelector((state) => state.entities.filter);
   const dispatch = useDispatch();
-  // const books = getBooks.filter((book) => book.category === category);
 
   const handleBookRemove = (books) => {
     dispatch(actions.bookRemoved(getID(books)));
@@ -20,15 +19,29 @@ const BooksList = () => {
     dispatch(actions.changeFilter(e.target.value));
   };
 
-  const displayBooks = getBooks.map((book) => (
-    <Book
-      key={book.id}
-      handleClick={handleBookRemove}
-      book={{
-        id: book.id, title: book.title, category: book.category, percent: book.percent,
-      }}
-    />
-  ));
+  const selectedCat = (category) => {
+    if (category === 'All') {
+      return getBooks.map((book) => (
+        <Book
+          key={book.id}
+          handleClick={handleBookRemove}
+          book={{
+            id: book.id, title: book.title, category: book.category, percent: book.percent,
+          }}
+        />
+      ));
+    }
+    const books = getBooks.filter((book) => book.category === category);
+    return books.map((book) => (
+      <Book
+        key={book.id}
+        handleClick={selectedCategory}
+        book={{
+          id: book.id, title: book.title, category: book.category, percent: book.percent,
+        }}
+      />
+    ));
+  };
 
   const filterCategories = (
     <div>
@@ -52,7 +65,7 @@ const BooksList = () => {
   return (
     <div className="displayBooks">
       {filterCategories}
-      {displayBooks}
+      {selectedCat(selectedCategory)}
     </div>
   );
 };
