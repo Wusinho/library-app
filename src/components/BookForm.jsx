@@ -21,12 +21,12 @@ const BookForm = () => {
 
   return (
     <form onSubmit={(e) => handleSubmit(e)} className="book__addition">
-      <div className="input-group mb-3">
+      <div className="d-flex mb-3">
         <input
           onChange={(e) => setTitle(e.target.value)}
           value={title}
           type="text"
-          className="form-control me-3"
+          className="form__title  me-3"
           placeholder="Book title"
           required
         />
@@ -44,7 +44,7 @@ const BookForm = () => {
             </option>
           ))}
         </select>
-        <button className="btn btn-primary btn__addBook" type="submit" id="input5">
+        <button className="btn__addBook" type="submit" id="input5">
           Add Book
         </button>
       </div>

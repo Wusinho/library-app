@@ -5,9 +5,34 @@
 }
 
 .form__input {
-  width: 200px;
+  width: 25%;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.125) !important;
   font-family: Roboto Slab;
   padding: 0 5px; 
+}
+
+.form__title {
+  width: 50%;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.125) !important;
+  font-family: Roboto Slab;
+  padding: 0 5px; 
+}
+
+.btn__addBook {
+  width: 25%;
+  padding: 5px 18px;
+  font-family: Roboto Slab;
+  font-size: 0.613rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  background-color: #0290ff;
+  border: none;
+  color: white;
+  border-radius: 3px;
 }
