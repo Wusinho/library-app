@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 .card {
-  font-family: Montserrat;
+  font-family: Montserrat, 'Times New Roman', Times, serif;
 }
 
 .btn__remove {
@@ -12,7 +12,7 @@
 
 .btn__update {
   padding: 5px 18px;
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, 'Times New Roman', Times, serif;
   font-size: 0.613rem;
   font-weight: 300;
   font-stretch: normal;
@@ -26,7 +26,7 @@
   border-radius: 3px;
 }
 
-span{
+span {
   padding-right: 15px;
 }
 
@@ -49,16 +49,15 @@ span:hover {
   max-height: 100px;
 }
 
-.book__progressbar > svg{
+.book__progressbar > svg {
   width: 30%;
   height: 30%;
 }
 
 .book__category {
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, 'Times New Roman', Times, serif;
   font-size: 0.675rem;
-  opacity: 0.5;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -68,7 +67,7 @@ span:hover {
 
 .book__title {
   margin: 0;
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, 'Times New Roman', Times, serif;
   font-size: 1.375rem;
   font-weight: bold;
   font-stretch: normal;
@@ -80,7 +79,7 @@ span:hover {
 .book__author {
   height: 1.188rem;
   margin: 0;
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, 'Times New Roman', Times, serif;
   font-size: 0.72rem;
   font-weight: 300;
   font-stretch: normal;
@@ -91,10 +90,9 @@ span:hover {
 }
 
 .card__options,
-.btn__remove
-{
+.btn__remove {
   height: 1.188rem;
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, 'Times New Roman', Times, serif;
   font-size: 0.72rem;
   font-weight: 300;
   font-stretch: normal;
@@ -111,7 +109,7 @@ span:hover {
 }
 
 .book__progress {
-  font-family: Montserrat;
+  font-family: Montserrat, 'Times New Roman', Times, serif;
   font-size: 1.5rem;
   font-weight: normal;
   font-stretch: normal;
@@ -127,7 +125,7 @@ span:hover {
 
 .book__chapter {
   opacity: 0.5;
-  font-family: Roboto Slab;
+  font-family: Roboto Slab, 'Times New Roman', Times, serif;
   font-size: 0.813rem;
   font-weight: 300;
   font-stretch: normal;
@@ -137,15 +135,14 @@ span:hover {
   margin-bottom: 4px;
 }
 
-.chapter__number{
-  font-family: Roboto Slab;
+.chapter__number {
+  font-family: Roboto Slab, 'Times New Roman', Times, serif;
   font-size: 0.95rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.4px;
-  color: var
 }
 
 .mid__border {
