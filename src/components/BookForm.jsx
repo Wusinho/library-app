@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import categories from './categories';
 import * as actions from '../actions/book';
+import '../style/BookAdd.css';
 
 const BookForm = () => {
   const [title, setTitle] = useState('');
@@ -19,7 +20,7 @@ const BookForm = () => {
   };
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
+    <form onSubmit={(e) => handleSubmit(e)} className="book__addition">
       <div className="input-group mb-3">
         <input
           onChange={(e) => setTitle(e.target.value)}

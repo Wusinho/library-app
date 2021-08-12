@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+.card {
+  font-family: Montserrat;
+}
+
+.btn__remove {
+  border: none;
+  background-color: inherit;
+}
+
+.btn__update {
+  padding: 5px 18px;
+  font-family: Roboto Slab;
+  font-size: 0.613rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  background-color: #0290ff;
+  border: none;
+  color: white;
+  border-radius: 3px;
+}
+
+span{
+  padding-right: 15px;
+}
+
+span:nth-child(2) {
+  padding: 0 15px;
+  border-left: 2px solid #f5f6fa;
+  border-right: 2px solid #f5f6fa;
+}
+
+span:nth-child(3) {
+  padding-left: 15px;
+}
+
+span:hover {
+  cursor: pointer;
+}
+
+.book__progressbar {
+  max-width: 200px;
+  max-height: 100px;
+}
+
+.book__progressbar > svg{
+  width: 30%;
+  height: 30%;
+}
+
+.book__category {
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.675rem;
+  opacity: 0.5;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.book__title {
+  margin: 0;
+  font-family: Roboto Slab;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+}
+
+.book__author {
+  height: 1.188rem;
+  margin: 0;
+  font-family: Roboto Slab;
+  font-size: 0.72rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.card__options,
+.btn__remove
+{
+  height: 1.188rem;
+  font-family: Roboto Slab;
+  font-size: 0.72rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.book__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book__progress {
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.book__completed {
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.book__chapter {
+  opacity: 0.5;
+  font-family: Roboto Slab;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-bottom: 4px;
+}
+
+.chapter__number{
+  font-family: Roboto Slab;
+  font-size: 0.95rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var
+}
+
+.mid__border {
+  border-right: 2px solid #f5f6fa;
+}
+
+.mid__card {
+  padding: 22px 0;
+}

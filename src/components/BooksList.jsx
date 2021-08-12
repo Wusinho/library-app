@@ -4,6 +4,7 @@ import * as actions from '../actions/book';
 import categories from './categories';
 import Book from './Book';
 import '../style/Navbar.css';
+import '../style/Body.css';
 
 const getID = (books) => books.id;
 
@@ -31,7 +32,9 @@ const BooksList = () => {
             title: book.title,
             description: book.description,
             category: book.category,
-            percent: book.percent,
+            progress: book.progress,
+            chapter: book.chapter,
+            author: book.author,
           }}
         />
       ));
@@ -46,7 +49,9 @@ const BooksList = () => {
           title: book.title,
           description: book.description,
           category: book.category,
-          percent: book.percent,
+          progress: book.progress,
+          chapter: book.chapter,
+          author: book.author,
         }}
       />
     ));
@@ -79,7 +84,7 @@ const BooksList = () => {
   return (
     <div className="books">
       {filterCategories}
-      <div className="books__container">
+      <div className="book__container">
         {selectedCat(selectedCategory)}
       </div>
     </div>
