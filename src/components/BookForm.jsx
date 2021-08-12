@@ -26,23 +26,25 @@ const BookForm = () => {
           onChange={(e) => setTitle(e.target.value)}
           value={title}
           type="text"
-          className="form-control"
+          className="form-control me-3"
           placeholder="Book title"
+          required
         />
         <select
           onChange={(e) => setCategory(e.target.value)}
           value={category}
-          className="form-control"
+          className="form__input me-3"
           id="input3"
+          required
         >
-          <option defaultValue>Choose a Category</option>
+          <option defaultValue required>Category</option>
           {categories.map((cat) => (
             <option key={cat.id} value={cat.cat}>
               {cat.cat}
             </option>
           ))}
         </select>
-        <button className="btn btn-success" type="submit" id="input5">
+        <button className="btn btn-primary btn__addBook" type="submit" id="input5">
           Add Book
         </button>
       </div>

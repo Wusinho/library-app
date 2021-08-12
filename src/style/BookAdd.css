@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 .book__addition {
   margin: 0 6.25rem;
+}
+
+.form__input {
+  width: 200px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.125) !important;
+  font-family: Roboto Slab;
+  padding: 0 5px; 
 }
