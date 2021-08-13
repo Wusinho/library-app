@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as actions from '../actions/book';
 import categories from './categories';
 import Book from './Book';
+import '../style/Navbar.css';
+import '../style/Body.css';
 
 const getID = (books) => books.id;
 
@@ -26,7 +28,13 @@ const BooksList = () => {
           key={book.id}
           handleClick={handleBookRemove}
           book={{
-            id: book.id, title: book.title, category: book.category, percent: book.percent,
+            id: book.id,
+            title: book.title,
+            description: book.description,
+            category: book.category,
+            progress: book.progress,
+            chapter: book.chapter,
+            author: book.author,
           }}
         />
       ));
@@ -37,35 +45,48 @@ const BooksList = () => {
         key={book.id}
         handleClick={selectedCategory}
         book={{
-          id: book.id, title: book.title, category: book.category, percent: book.percent,
+          id: book.id,
+          title: book.title,
+          description: book.description,
+          category: book.category,
+          progress: book.progress,
+          chapter: book.chapter,
+          author: book.author,
         }}
       />
     ));
   };
 
   const filterCategories = (
-    <div>
-      <form>
-        <select
-          className="form-control"
-          onChange={(e) => handleFilterCHange(e)}
-        >
-          <option defaultValue disabled>Choose a Category</option>
-          <option key="0"> All </option>
-          {categories.map((cat) => (
-            <option key={cat.id} value={cat.cat}>
-              {cat.cat}
+    <nav className="navbar navbar-light bg-light">
+      <div className="navbar__items">
+        <h4 className="bookstore__name">Bookstore CMS</h4>
+        <form>
+          <select
+            className="book__categories"
+            onChange={(e) => handleFilterCHange(e)}
+          >
+            <option defaultValue disabled>
+              Choose a Category
             </option>
-          ))}
-        </select>
-      </form>
-    </div>
+            <option key="0"> All </option>
+            {categories.map((cat) => (
+              <option key={cat.id} value={cat.cat}>
+                {cat.cat}
+              </option>
+            ))}
+          </select>
+        </form>
+      </div>
+    </nav>
   );
 
   return (
-    <div className="displayBooks">
+    <div className="books">
       {filterCategories}
-      {selectedCat(selectedCategory)}
+      <div className="book__container">
+        {selectedCat(selectedCategory)}
+      </div>
     </div>
   );
 };

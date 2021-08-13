@@ -1,10 +1,9 @@
 import * as actions from './booksActions';
 
-export const bookAdded = (title, description, category) => ({
+export const bookAdded = (title, category) => ({
   type: actions.CREATE_BOOK,
   payload: {
     title,
-    description,
     category,
   },
 });
